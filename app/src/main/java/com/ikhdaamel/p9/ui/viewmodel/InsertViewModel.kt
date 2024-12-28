@@ -1,5 +1,6 @@
 package com.ikhdaamel.p9.ui.viewmodel
 
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.ikhdaamel.p9.model.Mahasiswa
@@ -7,6 +8,10 @@ import com.ikhdaamel.p9.repository.MahasiswaRepository
 
 class InsertViewModel(private val mhs: MahasiswaRepository): ViewModel(){
     var uiState by mutableStateOf(InsertUiState())
+        private set
+    fun updateInsertMhsState(insertUiEvent: InsertUiEvent){
+        uiState = InsertUiState(insertUiEvent = insertUiEvent)
+    }
 }
 
 data class InsertUiState(
