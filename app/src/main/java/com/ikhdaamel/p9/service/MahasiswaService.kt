@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Query
-
+import retrofit2.http.PUT
 
 interface MahasiswaService {
     @Headers(
@@ -21,5 +21,8 @@ interface MahasiswaService {
 
     @POST("insertmahasiswa.php")
     suspend fun insertMahasiswa(@Body mahasiswa: Mahasiswa)
+
+    @PUT("editmahasiswa.php")
+    suspend fun updateMahasiswa(@Query("nim")nim: String, @Body mahasiswa: Mahasiswa)
 
 }
