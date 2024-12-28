@@ -1,9 +1,12 @@
 package com.ikhdaamel.p9.service
 
 import com.ikhdaamel.p9.model.Mahasiswa
+import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.POST
 import retrofit2.http.Query
+
 
 interface MahasiswaService {
     @Headers(
@@ -15,5 +18,8 @@ interface MahasiswaService {
 
     @GET("baca1mahasiswa.php/{nim}")
     suspend fun getMahasiswaById(@Query("nim")nim:String):Mahasiswa
+
+    @POST("insertmahasiswa.php")
+    suspend fun insertMahasiswa(@Body mahasiswa: Mahasiswa)
 
 }
