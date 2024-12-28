@@ -1,7 +1,9 @@
 package com.ikhdaamel.p9.service
 
 import com.ikhdaamel.p9.model.Mahasiswa
+import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
@@ -25,4 +27,6 @@ interface MahasiswaService {
     @PUT("editmahasiswa.php")
     suspend fun updateMahasiswa(@Query("nim")nim: String, @Body mahasiswa: Mahasiswa)
 
+    @DELETE("deletemahasiswa")
+    suspend fun deleteMahasiswa(@Query("nim")nim: String):Response<Void>
 }
