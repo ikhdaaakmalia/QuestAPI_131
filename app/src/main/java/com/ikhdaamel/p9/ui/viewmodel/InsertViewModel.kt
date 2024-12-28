@@ -2,6 +2,10 @@ package com.ikhdaamel.p9.ui.viewmodel
 
 import com.ikhdaamel.p9.model.Mahasiswa
 
+data class InsertUiState(
+    val insertUiEvent: InsertUiEvent: InsertUiEvent = InsertUiEvent()
+)
+
 data class InsertUiEvent(
     val nim: String = "",
     val nama: String = "",
