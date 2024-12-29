@@ -21,8 +21,7 @@ class MainActivity : ComponentActivity() {
             P9Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     MahasiswaApp(
-                        //name = "Android",
-                        //modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }

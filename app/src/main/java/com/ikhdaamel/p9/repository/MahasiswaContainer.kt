@@ -21,11 +21,3 @@ class MahasiswaContainer : AppContainer{
     private val mahasiswaService: MahasiswaService by lazy { retrofit.create(MahasiswaService::class.java) }
     override val mahasiswaRepository: MahasiswaRepository by lazy { NetworkMahasiswaRepository(mahasiswaService) }
 }
-
-class MahasiswaApplication:Application(){
-    lateinit var container: AppContainer
-    override fun onCreate() {
-        super.onCreate()
-        container= MahasiswaContainer()
-    }
-}
