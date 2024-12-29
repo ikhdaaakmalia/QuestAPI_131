@@ -12,8 +12,8 @@ import retrofit2.http.PUT
 
 interface MahasiswaService {
     @Headers(
-        "Accept: application/json",
-        "Content-Type: application.json",
+        "Accept:application/json",
+        "Content-Type:application/json",
     )
     @GET("bacamahasiswa.php")
     suspend fun getMahasiswa(): List<Mahasiswa>
@@ -27,6 +27,6 @@ interface MahasiswaService {
     @PUT("editmahasiswa.php")
     suspend fun updateMahasiswa(@Query("nim")nim: String, @Body mahasiswa: Mahasiswa)
 
-    @DELETE("deletemahasiswa")
+    @DELETE("deletemahasiswa.php")
     suspend fun deleteMahasiswa(@Query("nim")nim: String):Response<Void>
 }
