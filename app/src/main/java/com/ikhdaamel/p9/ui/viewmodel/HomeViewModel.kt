@@ -6,10 +6,16 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import coil.network.HttpException
+import com.ikhdaamel.p9.model.Mahasiswa
 import com.ikhdaamel.p9.repository.MahasiswaRepository
 import kotlinx.coroutines.launch
 import okio.IOException
 
+sealed class HomeUiState{
+    data class Success(val mahasiswa: List<Mahasiswa>) : HomeUiState()
+    object Error: HomeUiState()
+    object Loading: HomeUiState()
+}
 
 class HomeViewModel (private val mhs: MahasiswaRepository): ViewModel(){
     var mhsUIState: HomeUiState by mutableStateOf(HomeUiState.Loading)
