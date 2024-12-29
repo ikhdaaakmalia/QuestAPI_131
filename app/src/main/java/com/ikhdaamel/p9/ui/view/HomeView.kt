@@ -39,9 +39,17 @@ import androidx.compose.ui.unit.dp
 import com.ikhdaamel.p9.R
 import com.ikhdaamel.p9.model.Mahasiswa
 import com.ikhdaamel.p9.ui.customwidget.CustomeTopAppBar
+import com.ikhdaamel.p9.ui.navigation.DestinasiNavigasi
 import com.ikhdaamel.p9.ui.viewmodel.HomeUiState
 import com.ikhdaamel.p9.ui.viewmodel.HomeViewModel
+import com.ikhdaamel.p9.ui.viewmodel.InsertViewModel
 import com.ikhdaamel.p9.ui.viewmodel.PenyediaViewModel
+
+
+object DestinasiHome : DestinasiNavigasi{
+    override val route = "home"
+    override val titleRes = "Home Mhs"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
