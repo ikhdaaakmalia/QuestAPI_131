@@ -1,8 +1,8 @@
 home
-![home](https://github.com/user-attachments/assets/828cad1b-bcc2-43dc-bbb6-9445ccd1727b)
+![home](https://github.com/user-attachments/assets/6687146b-0765-46e0-8660-0db9fc2688f7)
 insert
-![insert2](https://github.com/user-attachments/assets/cb88f2b4-2b27-4920-8bd6-acf1b33169fe)
+![input](https://github.com/user-attachments/assets/71056c61-b1b4-4ce7-9a91-1887fe053e88)
 tampil
-![tampil2](https://github.com/user-attachments/assets/b39c828d-2a97-4b0f-a750-2a5c2c6cb75a)
+![data](https://github.com/user-attachments/assets/717372b1-d4cb-441f-9005-fe4a3d02ca61)
 setelah dihapus
 ![hpus](https://github.com/user-attachments/assets/317d9791-8d9c-492b-a431-a7f97cbed796)
