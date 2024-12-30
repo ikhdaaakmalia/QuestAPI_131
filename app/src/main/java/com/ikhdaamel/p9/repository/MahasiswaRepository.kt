@@ -27,7 +27,7 @@ class NetworkMahasiswaRepository(
         try {
             val response = mahasiswaApiService.deleteMahasiswa(nim)
             if(!response.isSuccessful){
-                throw IOException("gagal menghapus kontak. HTTP kode: ${response.code()}")
+                throw IOException("gagal menghapus data Mahasiswa. HTTP kode: ${response.code()}")
             } else {
                 response.message()
                 println(response.message())

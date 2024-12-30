@@ -9,7 +9,7 @@ import com.ikhdaamel.p9.model.Mahasiswa
 import com.ikhdaamel.p9.repository.MahasiswaRepository
 import kotlinx.coroutines.launch
 
-class InsertViewModel(private val mhs: MahasiswaRepository): ViewModel(){
+class InsertViewModel(private val mahasiswaRepository: MahasiswaRepository): ViewModel(){
     var uiState by mutableStateOf(InsertUiState())
         private set
     fun updateInsertMhsState(insertUiEvent: InsertUiEvent){
@@ -18,7 +18,7 @@ class InsertViewModel(private val mhs: MahasiswaRepository): ViewModel(){
     suspend fun insertMhs(){
         viewModelScope.launch {
             try {
-                mhs.insertMahasiswa(uiState.insertUiEvent.toMhs())
+                mahasiswaRepository.insertMahasiswa(uiState.insertUiEvent.toMhs())
             } catch (e: Exception) {
                 e.printStackTrace()
             }
