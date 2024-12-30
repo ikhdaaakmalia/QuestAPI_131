@@ -16,7 +16,7 @@ class UpdateViewModel (
 ): ViewModel(){
     var updateUIState by mutableStateOf(InsertUiState())
         private set
-    private val _nim: String = checkNotNull(savedStateHandle[DestinasiUpdate.nim])
+    private val _nim: String = checkNotNull(savedStateHandle[DestinasiUpdate.NIM])
 
     init {
         viewModelScope.launch {

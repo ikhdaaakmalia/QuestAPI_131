@@ -45,12 +45,12 @@ fun PengelolaHalaman(
         }
         composable(DestinasiUpdate.routesWithArg,
             arguments = listOf(
-                navArgument(DestinasiUpdate.nim){
+                navArgument(DestinasiUpdate.NIM){
                     type = NavType.StringType
                 }
             )
         ){
-            val nim = it.arguments?.getString(DestinasiUpdate.nim)
+            val nim = it.arguments?.getString(DestinasiUpdate.NIM)
             nim?.let { nim ->
                 UpdateScreen(
                     onBack = {navController.popBackStack()},
